@@ -9,6 +9,7 @@ export default class Home extends Component {
       redirect: false,
     };
   }
+
   handleSubmit = (e) => {
     e.preventDefault();
     const data = {
@@ -24,16 +25,6 @@ export default class Home extends Component {
         this.setState({
           redirect: true,
         });
-        axios
-          .post("user.php", localStorage.getItem("token"), {
-            withCredentials: true,
-          })
-          .then((res) => {
-            this.props.setUser(res.data);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
       })
       .catch((err) => {
         console.log(err);
