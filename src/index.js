@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:8000/php/";
+axios.defaults.baseURL = "https://memorybackjulie.herokuapp.com/php/";
 axios.defaults.headers.common["Authorization"] =
   "Bearer " + localStorage.getItem("token");
 
