@@ -19,7 +19,7 @@ export default class Home extends Component {
       password: this.password,
     };
     axios
-      .post("register.php", data)
+      .post("register.php", JSON.stringify(data))
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         this.setState({
