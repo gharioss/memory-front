@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Navigate } from "react-router-dom";
 
-export default class Home extends Component {
+export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
