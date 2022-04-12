@@ -7,6 +7,7 @@ import axios from "axios";
 axios.defaults.baseURL = "https://memorybackjulie.herokuapp.com/php/";
 axios.defaults.headers.common["Authorization"] =
   "Bearer " + localStorage.getItem("token");
+axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
 
 ReactDOM.render(
   <React.StrictMode>

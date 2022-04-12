@@ -25,7 +25,9 @@ export default class Home extends Component {
           redirect: true,
         });
         axios
-          .post("user.php", localStorage.getItem("token"))
+          .post("user.php", localStorage.getItem("token"), {
+            withCredentials: true,
+          })
           .then((res) => {
             this.props.setUser(res.data);
           })
